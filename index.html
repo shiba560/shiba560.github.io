@@ -43,16 +43,44 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h2 id="my-job-portfolio">ポートフォリオ</h2>
-		<p>現在の職務やスキル、実務における成果物などを紹介いたします。</p>
+		<p>成果物やスキル、職務経歴などを紹介いたします。（2018/12/22更新）</p>
 
 		<hr style="border:0; border-top: 1px dashed black; margin: 30px 0px;">
 		
-		<h3 id="job">現在の職務</h3>
-		<p>
-		平成26年4月～現在　いすゞ自動車株式会社<br>
-		事業内容：トラック･バス製造業　　担当：小型トラック「エルフ」のトランスミッション企画･設計<br>
-		web系エンジニアとして従事したことはなく、異業種転職となります。<br>
-		</p>
+		<h3 id="product">成果物</h3>
+		
+		<h4>■ 音楽ゲーム スコア登録サイト</h4>
+			<p>サイト⇒<a href="http://hotmist.ddo.jp/sukusuku/don_score/don_top.html">リンク</a></p>
+			<p>ソースコード⇒<a href="https://github.com/shiba560/don_score">リンク</a></p>
+			<p>
+			概要：<br>
+			音楽ゲーム「太鼓の達人 セッションでドドンがドン！」のスコア投稿・閲覧サイトです。<br>
+			投稿されたスコアは以下図のように一覧で確認でき、自分や他人のクリア状況が一目で分かります。<br>
+			<img src="http://hotmist.ddo.jp/~shiba560/portfolio/job_VBA/fig/don score.PNG" width="50%">
+			</p>
+			</p>
+			作成背景：<br>
+			曲ごとのスコアを確認する機能はゲーム内にもありますが、クリア状況全体を俯瞰する機能や
+			他人のスコアを確認する機能はなかったため作成しました。<br>
+			現在は最低限の機能（データの追加、更新、削除、検索）のみ実装しており、
+			ユーザー認証機能やSQLインジェクション対策は未実装です。
+			</p>
+			<p>
+			言語：Perl、html、CSS<br>
+			データベース：SQLite
+			</p>
+			<p>
+			所感：<br>
+			PerlでCGIプログラムを記述する行為とSQLiteでデータベースを構築する行為はどちらも初めての経験であり、
+			思い通りに動かずに詰まる場面が幾度となくありました。例えば、<br>
+			・パーミッションの設定忘れでCGIが動かない。<br>
+			・DBファイルのパーミッションはそのファイルを置いてあるディレクトリの書き込みも許可する必要があることを知らない。<br>
+			・SQL文に「$dbh->{RaiseError} = 1;」を入れておらず、SQL文のどこにエラーがあるのか気付けない。<br>
+			・ヒアドキュメントの末尾に「	EOL」といった具合にTABスペースを入れてしまう。<br>
+			・Perlの文字列の比較演算子に"eq"でなく"=="を使用してしまう。<br>
+			・・・<br>
+			しかし2週間かけて最終的には動作するページに仕上げることができ、作成過程においてもプログラミングを楽しむことができました。<br>
+			</p>
 		
 		<hr style="border:0; border-top: 1px dashed black; margin: 30px 0px;">
 		
@@ -60,7 +88,7 @@
 			<h4>■ 言語</h4>
 			<ul>
 			  <li>HTML+CSS：本ページのような簡単な静的サイトを作成できます。</li>
-			  <li>JavaScript：アプリを自作しながら習得中。</li>
+			  <li>JavaScript, Perl：アプリを自作しながら習得中。</li>
 			  <ul class="custom">
 			    <li>（例）電車の発車時間カウントダウンアプリ⇒
 				<a href="http://hotmist.ddo.jp/~shiba560/portfolio/traintime/traintime.html">リンク</a></li>
@@ -79,6 +107,7 @@
 			<ul>
 			  <li>GitHub：本ポートフォリオの管理･公開に使用。</li>
 			  <li>Linux：VSCodeをLinux上で操作するため、WSLを通してUbuntuを使用。</li>
+			  <li>SQLite：本ポートフォリオの成果物に使用。</li>
 			</ul>
 			
 			<h4>■ その他</h4>
@@ -93,9 +122,13 @@
 			</ul>
 			
 		<hr style="border:0; border-top: 1px dashed black; margin: 30px 0px;">
-
-		<h3 id="job_output">実務における成果物</h3>
+		
+		<h3 id="job">現在の職務</h3>
 		<p>
+		平成26年4月～現在　いすゞ自動車株式会社<br>
+		事業内容：トラック･バス製造業　　担当：小型トラック「エルフ」のトランスミッション企画･設計<br>
+		web系エンジニアとして従事したことはなく、異業種転職となります。<br>
+		<br>
 		本業は機械設計でありプログラミングを全く使う必要がありませんでしたが、
 		どうしても業務効率化がしたくて業務中に個人的に作成したツールを紹介いたします。
 		</p>
